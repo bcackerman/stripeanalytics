@@ -23,9 +23,11 @@ end
 gem 'pg'
 gem 'simple_form'
 gem 'annotate'
-gem 'devise'
+gem 'devise', '~> 2.2.3'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
+gem 'omniauth'
+gem 'omniauth-stripe-connect'
 
 # heroku stuff
 group :development, :test do
@@ -43,6 +45,4 @@ end
 
 # heroku stuff
 gem 'execjs'
-gem 'heroku'
-
 gem 'jquery-rails'

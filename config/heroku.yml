@@ -10,10 +10,10 @@
 #     - <Heroku config:var name>: <Heroku config:var value>
 
 production: 
-  app: yescollections
+  app: stripeanalytics
   stack: cedar
   tag: production/*
-  repo: git@heroku.com:yescollections.git
+  repo: git@heroku.com:stripeanalytics.git
   config:
     BUNDLE_WITHOUT: "development:test"
     GOOGLE_ANALYTICS: "UA-37646106-1"

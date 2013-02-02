@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<% flash.each do |key, value| %>
+		<div id="alert">
+			<%= content_tag :div, value, :class => "alert flash #{key}" unless value.blank? %>
+		</div>
+	<% end %>
+	
+	<%= yield %>
 
 </body>
 </html>
