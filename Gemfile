@@ -23,8 +23,9 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'omniauth'
 gem 'omniauth-stripe-connect'
+gem 'compass'
 gem 'compass-rails','~> 1.0.0.rc.2'
-
+gem 'newrelic_rpm'
 
 # heroku stuff
 group :development, :test do
