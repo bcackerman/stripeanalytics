@@ -37,6 +37,8 @@
 		color: #676666;
 		@include white-shadow;
 		vertical-align: bottom;
+	}
+	.title-fix{
 		top:12px;
 		position: relative;
 	}
@@ -70,9 +72,8 @@
 .ranges{
 	display:none;
 }
-
 .box{
-	padding:15px;
+	padding:25px;
 	background:#fff;
 	border:1px solid #dcdcdc;
 	-webkit-border-radius: 4px;
