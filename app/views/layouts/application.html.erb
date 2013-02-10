@@ -8,7 +8,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body <%= "id='home'".html_safe if params[:controller] == "home" %>>
 	<% flash.each do |key, value| %>
 		<div id="alert">
 			<%= content_tag :div, value, :class => "alert flash #{key}" unless value.blank? %>

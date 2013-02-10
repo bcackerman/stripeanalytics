@@ -10,3 +10,26 @@ body{
 [class^="icon-"], [class*=" icon-"]{
   background:none;
 }
+abbr{
+	display: none;
+}
+.form-actions{
+	background-color: transparent;
+	padding:0;
+	border:0;
+}
+hr {
+	margin: 20px 0;
+	border: 0;
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid white;
+}
+.editor-title{
+	color: #676666;
+	@include white-shadow;
+	vertical-align: bottom;
+	font-size:14px;
+}
+.center{
+	text-align: center;
+}

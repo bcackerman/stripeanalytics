@@ -20,4 +20,8 @@
 
 $(document).ready(function() {
     $('#revenue-dates').daterangepicker();
+    $('#signup-box').modal({
+    	show: true,
+    	backdrop: false
+    });
 });

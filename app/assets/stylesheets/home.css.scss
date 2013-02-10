@@ -1,3 +1,65 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixins";
+
+#home{
+	background-color: #333;
+	background-image: url('home-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.padding-box{
+		padding:0 30px 30px 30px;
+	}
+	h1.home{
+		font-size:30px;
+	}
+	.logo{
+		font-size:24px;
+	}
+	#features{
+		list-style: none;
+		margin-top:20px;
+		li{
+			font-size:14px;
+			padding:0 0 15px 0;
+			i{
+				color:#ccc;
+			}
+		}
+	}
+	#signup-button-box{
+		background-color:#e8f3f8;
+		-webkit-border-radius: 0px 0px 5px 5px;
+		border-radius: 0px 0px 5px 5px;
+		margin:0 -45px -45px -45px;
+		padding:40px;
+		text-align: center;
+		#signup-button{
+			background-color: #32a4e1;
+			padding:19px 30px;
+			border-bottom:1px solid #135376;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			color:#fff;
+			font-weight: 700;
+				@include top-black-shadow;
+			#big-s{
+				font-size:29px;
+				border-right:1px solid #2983b5;
+				padding:0 10px 0 0;
+				margin:10px 10px 0 0;
+				position: relative;
+				top:4px;
+			}
+			#long-part{
+				font-size:20px;
+			}
+		}
+		#signup-button:hover{
+			text-decoration: none;
+			background-color: #4eb8f0;
+		}
+	}
+}
