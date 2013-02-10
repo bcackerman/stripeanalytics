@@ -1,0 +1,85 @@
+.btn{
+	background: #fff;
+	color:#969696;
+	font-size:13px;
+	border:0;
+	padding:6px 16px;
+
+	border:1px solid #dcdcdc;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 1px 3px 0px #e1e1e1;
+	box-shadow: 0px 1px 3px 0px #e1e1e1;
+	i{
+		top:1px;
+		position:relative;
+		margin-right:4px;
+	}
+}
+.btn:hover{
+	color:#888888;
+	background: #f7f7f7;
+	i{
+		text-decoration:none;
+	}
+}
+.btn-primary {
+	color: white;
+	background: #5e5e5e;
+}
+.btn-primary:hover{
+	background:#777;
+	color:#fff;
+}
+.btn-success {
+	color: white;
+	background: #339329;
+}
+.btn-success:hover{
+	background: #45aa3b;
+	color:white;
+}
+.btn-link{
+	color:#08C;
+	text-transform:none;
+	background:none;
+}
+.btn-link:hover{
+	color:#08C;
+	background:none;
+}
+.btn-inverse{
+	background:#434446;
+	color:#fff;
+}
+.btn-inverse:hover{
+	background:#5c5d60;
+	color:#fff;
+}
+.btn-love-it{
+	background:#f3b84b;
+	color:white;
+}
+.btn-love-it:hover{
+	background:#f7c15e;
+	color:white;
+}
+.btn-unlove-it{
+	background:#f7d089;
+	color:white;
+	i{
+		opacity:0.6;
+		filter:alpha(opacity=60);
+	}
+}
+.btn-unlove-it:hover{
+	background:#fbdba0;
+	color:white;
+}
+.btn-small {
+	padding: 3px 9px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+
