@@ -9,10 +9,14 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap
  *= require_tree .
- *= require font-awesome
  */
 
+@import "compass";
+@import "bootstrap";
+@import "mixins";
+@import "font-awesome"; 
+@import "daterangepicker";
+@import "dashboard";
 @import "global";
 @import "buttons";

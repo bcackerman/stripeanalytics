@@ -1,3 +1,76 @@
-// Place all the styles related to the dashboard controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixins";
+
+.masthead{
+	.logo{
+		font-family:'Helvetica Neue', Helvetica, arial;
+		font-size:18px;
+		font-weight:bold;
+		@include white-shadow;
+		a{
+			color: #343434;
+			span{
+				font-weight:300;
+			}
+		}
+		a:hover{
+			color: #000;
+			text-decoration: none;
+		}
+	}
+	.nav-pills > li > a {
+		color: #4c4d4d;
+		font-size:12px;
+		padding:8px 0 8px 14px;
+		margin-top:6px;
+		@include white-shadow;
+	}
+	.nav-pills > li > a:hover {
+		background-color: transparent;
+		text-decoration: underline;
+	}
+}
+.box-title{
+	strong{
+		padding: 0 0 0 20px;
+		color: #676666;
+		top:10px;
+		position: relative;
+		@include white-shadow;
+	}
+}
+.date-picker{
+	#revenue-dates{
+		background-color:#edeeee;
+		border:1px solid #dcdcdc;
+		-webkit-box-shadow: inset 0px 1px 2px 0px #e3e4e4;
+		box-shadow: inset 0px 1px 2px 0px #e3e4e4;
+		font-size:12px;
+		padding:5px 13px;
+		@include white-shadow;
+		width:140px;
+	}
+	.icon-calendar{
+		color:#b4b4b4;
+		font-size:18px;
+		@include white-shadow;
+		top:2px;
+		position: relative;
+		margin-right: 5px
+	}
+}
+.ranges{
+	display:none;
+}
+.box{
+	padding:15px;
+	background:#fff;
+	border:1px solid #dcdcdc;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 1px 3px 0px #e1e1e1;
+	box-shadow: 0px 1px 3px 0px #e1e1e1;
+}
+
+
+
+

@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require_self
 //= require bootstrap-full
+//= require date
+//= require daterangepicker
+
+
+$(document).ready(function() {
+    $('#revenue-dates').daterangepicker();
+});
