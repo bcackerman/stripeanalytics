@@ -12,7 +12,6 @@ gem 'rails', '3.2.11'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'compass-rails','~> 1.0.0.rc.2'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -24,6 +23,8 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'omniauth'
 gem 'omniauth-stripe-connect'
+gem 'compass-rails','~> 1.0.0.rc.2'
+
 
 # heroku stuff
 group :development, :test do
