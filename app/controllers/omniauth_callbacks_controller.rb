@@ -1,6 +1,7 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def stripe_connect
+  	logger.debug
     user = User.from_omniauth(request.env["omniauth.auth"])
     if user.persisted?
     	sign_in_and_redirect user, notice: "Thanks for signing up!"

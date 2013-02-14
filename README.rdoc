@@ -1,3 +1,19 @@
 == To start
 rake db:migrate
 rails s -p 3003 
+
+== Schema
+What do we need?
+
+Churn Rate: 
+	Customers
+Revenue / Customer:
+	Charges
+	Customers
+Trial to Paid:
+	Customers
+Monthly Revenue:
+	Charges
+
+Extras?
+	Plans

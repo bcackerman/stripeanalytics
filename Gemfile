@@ -26,6 +26,7 @@ gem 'sass-rails',   '~> 3.2.5'
 gem 'compass'
 gem 'compass-rails','~> 1.0.0.rc.2'
 gem 'newrelic_rpm'
+gem 'stripe'
 
 # heroku stuff
 group :development, :test do

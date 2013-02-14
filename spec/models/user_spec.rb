@@ -17,6 +17,8 @@
 #  updated_at             :datetime         not null
 #  provider               :string(255)
 #  uid                    :string(255)
+#  token                  :string(255)
+#  livemode               :boolean
 #
 
 require 'spec_helper'
