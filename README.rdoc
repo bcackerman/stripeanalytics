@@ -2,7 +2,7 @@
 rake db:migrate
 rails s -p 3003 
 
-== Schema
+== Plan
 What do we need?
 
 Churn Rate: 
@@ -17,3 +17,59 @@ Monthly Revenue:
 
 Extras?
 	Plans
+	Coupons
+
+== Schema
+Charge
+	id_charge:string		= id
+	object:string				= object
+	created:datetime	= Time.at(created)
+	livemode:boolean		= livemode
+	paid:boolean				= paid
+	amount:decimal			= amount
+	currency:string			= currency
+	refunded:boolean		= refunded
+	fee:decimal					= fee
+	card_last4:string		= card.last4
+	amount_refunded:decimal	= amount_refunded
+	customer:string			= customer
+	invoice:string			= invoice
+
+Customer
+	id_customer:string	= id
+	object:string				=	object
+	created:datetime		= Time.at(created)
+	livemode:boolean		= livemode
+	description:string	= description
+	card_last4:string		= active_card.last4
+	discount:decimal 		= discount
+	subscription_start:datetime	= Time.at(subscription.start)
+	subscription_status:boolean	= subscription.status
+	subscription_customer:string	= subscription.customer
+	subscription_cancel_at_period_end:boolean	= cancel_at_period_end
+	subscription_current_period_start:datetime = Time.at(subscription.current_period_start)
+	subscription_current_period_end:datetime	= Time.at(subscription.current_period_end)
+	subscription_ended_at:datetime = Time.at(subscription.ended_at)
+	subscription_trial_start:datetime = Time.at(subscription.trial_start)
+	subscription_trial_end:datetime = Time.at(subscription.trial_end)
+	subscription_canceled:datetime = Time.at(subscription.canceled)
+	subscription_plan_interval:string	= subscription.plan.interval
+	subscription_plan_name:string	= subscription.plan.name
+	subscription_plan_amount:decimal	= subscription.plan.amount
+	subscription_plan_livemode:boolean	= subscription.plan.livemode
+	subscription_plan_trial_period_days:integer	= subscription.plan.trial_period_days
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
