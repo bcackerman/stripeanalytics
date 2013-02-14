@@ -1,0 +1,63 @@
+<h1>Listing customers</h1>
+
+<table>
+  <tr>
+    <th>Id customer</th>
+    <th>Object</th>
+    <th>Created</th>
+    <th>Livemode</th>
+    <th>Description</th>
+    <th>Card last4</th>
+    <th>Discount</th>
+    <th>Subscription start</th>
+    <th>Subscription customer</th>
+    <th>Subscription cancel at period end</th>
+    <th>Subscription current period start</th>
+    <th>Subscription current period end</th>
+    <th>Subscription ended at</th>
+    <th>Subscription trial start</th>
+    <th>Subscription trial end</th>
+    <th>Subscription canceled</th>
+    <th>Subscription plan interval</th>
+    <th>Subscription plan name</th>
+    <th>Subscription plan amount</th>
+    <th>Subscription plan livemode</th>
+    <th>Subscription plan trial period days</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td><%= customer.id_customer %></td>
+    <td><%= customer.object %></td>
+    <td><%= customer.created %></td>
+    <td><%= customer.livemode %></td>
+    <td><%= customer.description %></td>
+    <td><%= customer.card_last4 %></td>
+    <td><%= customer.discount %></td>
+    <td><%= customer.subscription_start %></td>
+    <td><%= customer.subscription_customer %></td>
+    <td><%= customer.subscription_cancel_at_period_end %></td>
+    <td><%= customer.subscription_current_period_start %></td>
+    <td><%= customer.subscription_current_period_end %></td>
+    <td><%= customer.subscription_ended_at %></td>
+    <td><%= customer.subscription_trial_start %></td>
+    <td><%= customer.subscription_trial_end %></td>
+    <td><%= customer.subscription_canceled %></td>
+    <td><%= customer.subscription_plan_interval %></td>
+    <td><%= customer.subscription_plan_name %></td>
+    <td><%= customer.subscription_plan_amount %></td>
+    <td><%= customer.subscription_plan_livemode %></td>
+    <td><%= customer.subscription_plan_trial_period_days %></td>
+    <td><%= link_to 'Show', customer %></td>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Customer', new_customer_path %>

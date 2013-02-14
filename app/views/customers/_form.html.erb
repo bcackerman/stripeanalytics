@@ -1,0 +1,31 @@
+<%= simple_form_for(@customer) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :id_customer %>
+    <%= f.input :object %>
+    <%= f.input :created %>
+    <%= f.input :livemode %>
+    <%= f.input :description %>
+    <%= f.input :card_last4 %>
+    <%= f.input :discount %>
+    <%= f.input :subscription_start %>
+    <%= f.input :subscription_customer %>
+    <%= f.input :subscription_cancel_at_period_end %>
+    <%= f.input :subscription_current_period_start %>
+    <%= f.input :subscription_current_period_end %>
+    <%= f.input :subscription_ended_at %>
+    <%= f.input :subscription_trial_start %>
+    <%= f.input :subscription_trial_end %>
+    <%= f.input :subscription_canceled %>
+    <%= f.input :subscription_plan_interval %>
+    <%= f.input :subscription_plan_name %>
+    <%= f.input :subscription_plan_amount %>
+    <%= f.input :subscription_plan_livemode %>
+    <%= f.input :subscription_plan_trial_period_days %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

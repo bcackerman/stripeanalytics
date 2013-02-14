@@ -1,0 +1,110 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id customer:</b>
+  <%= @customer.id_customer %>
+</p>
+
+<p>
+  <b>Object:</b>
+  <%= @customer.object %>
+</p>
+
+<p>
+  <b>Created:</b>
+  <%= @customer.created %>
+</p>
+
+<p>
+  <b>Livemode:</b>
+  <%= @customer.livemode %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @customer.description %>
+</p>
+
+<p>
+  <b>Card last4:</b>
+  <%= @customer.card_last4 %>
+</p>
+
+<p>
+  <b>Discount:</b>
+  <%= @customer.discount %>
+</p>
+
+<p>
+  <b>Subscription start:</b>
+  <%= @customer.subscription_start %>
+</p>
+
+<p>
+  <b>Subscription customer:</b>
+  <%= @customer.subscription_customer %>
+</p>
+
+<p>
+  <b>Subscription cancel at period end:</b>
+  <%= @customer.subscription_cancel_at_period_end %>
+</p>
+
+<p>
+  <b>Subscription current period start:</b>
+  <%= @customer.subscription_current_period_start %>
+</p>
+
+<p>
+  <b>Subscription current period end:</b>
+  <%= @customer.subscription_current_period_end %>
+</p>
+
+<p>
+  <b>Subscription ended at:</b>
+  <%= @customer.subscription_ended_at %>
+</p>
+
+<p>
+  <b>Subscription trial start:</b>
+  <%= @customer.subscription_trial_start %>
+</p>
+
+<p>
+  <b>Subscription trial end:</b>
+  <%= @customer.subscription_trial_end %>
+</p>
+
+<p>
+  <b>Subscription canceled:</b>
+  <%= @customer.subscription_canceled %>
+</p>
+
+<p>
+  <b>Subscription plan interval:</b>
+  <%= @customer.subscription_plan_interval %>
+</p>
+
+<p>
+  <b>Subscription plan name:</b>
+  <%= @customer.subscription_plan_name %>
+</p>
+
+<p>
+  <b>Subscription plan amount:</b>
+  <%= @customer.subscription_plan_amount %>
+</p>
+
+<p>
+  <b>Subscription plan livemode:</b>
+  <%= @customer.subscription_plan_livemode %>
+</p>
+
+<p>
+  <b>Subscription plan trial period days:</b>
+  <%= @customer.subscription_plan_trial_period_days %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

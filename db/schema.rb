@@ -11,7 +11,51 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130214005634) do
+ActiveRecord::Schema.define(:version => 20130214063727) do
+
+  create_table "charges", :force => true do |t|
+    t.string   "id_charge"
+    t.string   "object"
+    t.boolean  "livemode"
+    t.boolean  "paid"
+    t.decimal  "amount"
+    t.string   "currency"
+    t.boolean  "refunded"
+    t.decimal  "fee"
+    t.string   "card_last4"
+    t.decimal  "amount_refunded"
+    t.string   "customer"
+    t.string   "invoice"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "customers", :force => true do |t|
+    t.string   "id_customer"
+    t.string   "object"
+    t.datetime "created"
+    t.boolean  "livemode"
+    t.string   "description"
+    t.string   "card_last4"
+    t.decimal  "discount"
+    t.datetime "subscription_start"
+    t.boolean  "subscription_status"
+    t.string   "subscription_customer"
+    t.boolean  "subscription_cancel_at_period_end"
+    t.datetime "subscription_current_period_start"
+    t.datetime "subscription_current_period_end"
+    t.datetime "subscription_ended_at"
+    t.datetime "subscription_trial_start"
+    t.datetime "subscription_trial_end"
+    t.datetime "subscription_canceled"
+    t.string   "subscription_plan_interval"
+    t.string   "subscription_plan_name"
+    t.decimal  "subscription_plan_amount"
+    t.boolean  "subscription_plan_livemode"
+    t.integer  "subscription_plan_trial_period_days"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
