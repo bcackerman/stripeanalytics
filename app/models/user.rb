@@ -30,6 +30,9 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid
+
+  has_many :customers
+  has_many :charges
   
   # checks to see if user is in the db yet, if not create it
   def self.from_omniauth(auth)
@@ -64,37 +67,5 @@ class User < ActiveRecord::Base
     else
       super
     end
-  end
-
-
-  def pull_stripe_data
-      # Use Stripe's bindings...
-      logger.debug "inside the method"
-      charges = Stripe::Charge.all({}, self.token)
-      logger.debug charges
-      
-    rescue Stripe::CardError => e
-      # Since it's a decline, Stripe::CardError will be caught
-      body = e.json_body
-      err  = body[:error]
-
-      puts "Status is: #{e.http_status}"
-      puts "Type is: #{err[:type]}"
-      puts "Code is: #{err[:code]}"
-      # param is '' in this case
-      puts "Param is: #{err[:param]}"
-      puts "Message is: #{err[:message]}"
-    rescue Stripe::InvalidRequestError => e
-      # Invalid parameters were supplied to Stripe's API
-    rescue Stripe::AuthenticationError => e
-      # Authentication with Stripe's API failed
-      # (maybe you changed API keys recently)
-    rescue Stripe::APIConnectionError => e
-      # Network communication with Stripe failed
-    rescue Stripe::StripeError => e
-      # Display a very generic error to the user, and maybe send
-      # yourself an email
-    rescue => e
-      # Something else happened, completely unrelated to Stripe
   end
 end

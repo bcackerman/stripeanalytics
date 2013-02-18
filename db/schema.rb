@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130214063727) do
+ActiveRecord::Schema.define(:version => 20130218031627) do
 
   create_table "charges", :force => true do |t|
     t.string   "id_charge"
-    t.string   "object"
+    t.string   "object_charge"
     t.boolean  "livemode"
     t.boolean  "paid"
     t.decimal  "amount"
@@ -28,11 +28,15 @@ ActiveRecord::Schema.define(:version => 20130214063727) do
     t.string   "invoice"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "user_id"
+    t.datetime "created"
   end
+
+  add_index "charges", ["user_id"], :name => "index_charges_on_user_id"
 
   create_table "customers", :force => true do |t|
     t.string   "id_customer"
-    t.string   "object"
+    t.string   "object_customer"
     t.datetime "created"
     t.boolean  "livemode"
     t.string   "description"
@@ -55,7 +59,10 @@ ActiveRecord::Schema.define(:version => 20130214063727) do
     t.integer  "subscription_plan_trial_period_days"
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
+    t.integer  "user_id"
   end
+
+  add_index "customers", ["user_id"], :name => "index_customers_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

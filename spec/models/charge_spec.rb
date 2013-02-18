@@ -4,7 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  id_charge       :string(255)
-#  object          :string(255)
+#  object_charge   :string(255)
 #  livemode        :boolean
 #  paid            :boolean
 #  amount          :decimal(, )
@@ -17,6 +17,8 @@
 #  invoice         :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  user_id         :integer
+#  created         :datetime
 #
 
 require 'spec_helper'

@@ -22,7 +22,7 @@ Extras?
 == Schema
 Charge
 	id_charge:string		= id
-	object:string				= object
+	object_charge:string				= object
 	created:datetime	= Time.at(created)
 	livemode:boolean		= livemode
 	paid:boolean				= paid
@@ -37,7 +37,7 @@ Charge
 
 Customer
 	id_customer:string	= id
-	object:string				=	object
+	object_customer:string				=	object
 	created:datetime		= Time.at(created)
 	livemode:boolean		= livemode
 	description:string	= description

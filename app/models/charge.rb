@@ -4,7 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  id_charge       :string(255)
-#  object          :string(255)
+#  object_charge   :string(255)
 #  livemode        :boolean
 #  paid            :boolean
 #  amount          :decimal(, )
@@ -17,8 +17,12 @@
 #  invoice         :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  user_id         :integer
+#  created         :datetime
 #
 
 class Charge < ActiveRecord::Base
-  attr_accessible :amount, :amount_refunded, :card_last4, :currency, :customer, :fee, :id_charge, :invoice, :livemode, :object, :paid, :refunded
+  attr_accessible :amount, :amount_refunded, :card_last4, :created, :currency, :customer, :fee, :id_charge, :invoice, :livemode, :object_charge, :paid, :refunded, :user_id
+
+  belongs_to :user
 end

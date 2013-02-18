@@ -4,7 +4,7 @@
 #
 #  id                                  :integer          not null, primary key
 #  id_customer                         :string(255)
-#  object                              :string(255)
+#  object_customer                     :string(255)
 #  created                             :datetime
 #  livemode                            :boolean
 #  description                         :string(255)
@@ -27,6 +27,7 @@
 #  subscription_plan_trial_period_days :integer
 #  created_at                          :datetime         not null
 #  updated_at                          :datetime         not null
+#  user_id                             :integer
 #
 
 require 'spec_helper'
