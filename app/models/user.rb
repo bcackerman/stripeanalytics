@@ -34,6 +34,8 @@ class User < ActiveRecord::Base
 
   has_many :customers
   has_many :charges
+
+  after_validation :assign_initial_fields
   
   # checks to see if user is in the db yet, if not create it
   def self.from_omniauth(auth)
@@ -69,4 +71,9 @@ class User < ActiveRecord::Base
       super
     end
   end
+
+  protected
+    def assign_initial_fields
+      self.last_time_stripe_pulled = DateTime.now
+    end
 end
