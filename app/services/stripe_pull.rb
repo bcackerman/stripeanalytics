@@ -1,7 +1,5 @@
 # service used to do all the Stripe heavy lifting
-
 class StripePull
-
 
 	# rails knows this is the first method to run through
 	def initialize(user)
@@ -11,17 +9,12 @@ class StripePull
 
 	def pull_stripe_data
     # Use Stripe's bindings...
-    Rails.logger.info "inside the method"
     stripe_charges = Stripe::Charge.all({}, @user.token)
     stripe_customers = Stripe::Customer.all({}, @user.token)
-    # Rails.logger.info "charges: #{stripe_charges}"
-    # Rails.logger.info "customers: #{stripe_customers}"
 
     # loop through & see if that record has been created, if not, create it and assign the var's
     stripe_charges.each do |ch|
-    	Rails.logger.info "output #{ch}"
     	new_charge = Charge.find_or_initialize_by_id_charge(ch.id)
-    	Rails.logger.info "new charge: #{new_charge}"
     	charges_attributes = {
     		id_charge: ch.id,
     		object_charge: ch.object,
@@ -38,17 +31,13 @@ class StripePull
     		invoice: ch.invoice,
     		user_id: @user.id
     	}
-    	Rails.logger.info "attr's: #{charges_attributes}"
-    	new_charge.assign_attributes(charges_attributes)
-    	Rails.logger.info "new_charge is: #{new_charge}"
+    	new_charge.attributes = charges_attributes
     	new_charge.save!
     end
     
-
     # do the same for customers
     stripe_customers.each do |cu|
     	new_customer = Customer.find_or_initialize_by_id_customer(cu.id)
-    	Rails.logger.info "new customers: #{new_customer.attributes}"
     	customers_attributes = {
     		id_customer: cu.id,
     		object_customer: cu.object,
@@ -74,14 +63,8 @@ class StripePull
     		subscription_plan_trial_period_days: cu.subscription.plan.trial_period_days,
     		user_id: @user.id
     	}
-    	new_customer.assign_attributes(customers_attributes)
+    	new_customer.attributes = customers_attributes
     	new_customer.save!
     end
 	end
-
 end
-
-
-# @permission = Permission.update_or_create_by_user_id_and_role_id_and_creator_id(@user.id, 2, current_user.id) do |p|
-#   p.group_id = @group.id
-# end

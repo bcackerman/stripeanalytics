@@ -17,7 +17,6 @@
 //= require date
 //= require daterangepicker
 
-
 $(document).ready(function() {
     $('#revenue-dates').daterangepicker();
     $('#signup-box').modal({

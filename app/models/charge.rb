@@ -25,4 +25,6 @@ class Charge < ActiveRecord::Base
   attr_accessible :amount, :amount_refunded, :card_last4, :created, :currency, :customer, :fee, :id_charge, :invoice, :livemode, :object_charge, :paid, :refunded, :user_id
 
   belongs_to :user
+
+  def 
 end
